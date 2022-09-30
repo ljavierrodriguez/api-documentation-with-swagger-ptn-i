@@ -1,0 +1,29 @@
+{
+  "name": "api-documentation-with-swagger-ptn-i",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljavierrodriguez/api-documentation-with-swagger-ptn-i.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ljavierrodriguez/api-documentation-with-swagger-ptn-i/issues"
+  },
+  "homepage": "https://github.com/ljavierrodriguez/api-documentation-with-swagger-ptn-i#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  }
+}
