@@ -1,0 +1,109 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Contact List REST API",
+        "description": "List of contacts",
+        "contact": {
+            "name": "",
+            "url": "",
+            "email": ""
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://9000-ljavierrodr-apidocument-arsms6veg8z.ws-us67.gitpod.io/",
+            "description": "Local Server"
+        }
+    ],
+    "components": {
+        "schemas": {
+            "Contact": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "description": "An id of a Contact",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "String",
+                        "description": "A name of a Contact",
+                        "example": "Jonh Doe"
+                    },
+                    "phone": {
+                        "type": "String",
+                        "description": "Phone number of a Cntact",
+                        "example": "+56911111111"
+                    }
+                }
+            },
+            "ContactInput": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "String",
+                        "description": "A name of a Contact",
+                        "example": "Jonh Doe"
+                    },
+                    "phone": {
+                        "type": "String",
+                        "description": "Phone number of a Cntact",
+                        "example": "+56911111111"
+                    }
+                }
+            },
+            "Message": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "String",
+                        "description": "An stats from response",
+                        "example": "success"
+                    },
+                    "message": {
+                        "type": "String",
+                        "description": "List of contacts successfully",
+                        "example": "+56911111111"
+                    },
+                    "results": {
+                        "type": "array",
+                        "description": "Collection of contacts"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Contacts",
+            "description": "Listado de Contacts Registrados"
+        }
+    ],
+    "paths": {
+        "/api/contacts": {
+            "get": {
+                "tags": [
+                    "Contacts"
+                ],
+                "description": "List of Contacts",
+                "operationId": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "List of contacts successfully",
+                        "content": {
+                            "application/json": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Contact"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
